@@ -1,0 +1,58 @@
+{
+    "Foods": [
+      {
+        "Food": "Eggs"
+      },
+      {
+        "Food": "Tuna"
+      },
+      {
+        "Food": "Oysters"
+      },
+      {
+        "Food": "Shellfish"
+      },
+      {
+        "Food": "Beef"
+      },
+      {
+        "Food": "Chicken"
+      },
+      {
+        "Food": "Beans"
+      },
+      {
+        "Food": "Almonds"
+      },
+      {
+        "Food": "Avocado"
+      },
+      {
+        "Food": "Garlic"
+      },
+      {
+        "Food": "Ginger"
+      },
+      {
+        "Food": "Pomegranate"
+      },
+      {
+        "Food": "Coconut"
+      },
+      {
+        "Food": "Spinach"
+      },
+      {
+        "Food": "Broccoli"
+      },
+      {
+        "Food": "Olive Oil"
+      },
+      {
+        "Food": "Dark Chocolate"
+      },
+      {
+        "Food": "Watermelon"
+      }
+    ]
+  }

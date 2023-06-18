@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+	--black: #1a1a1a;
+	--grey: #b8b8b8;
+	--white: #fefefe;
+}
+
+/* html {
+	font-size: calc(0.5vw + 0.5vh);
+} */
+
+html, body {
+	height: 100vh;
+}
+
+body {
+	background: linear-gradient(45deg, #654ea3, #eaafc8);
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.introheader {
+	text-align: center;
+	color: var(--white);
+	height: 10%;
+}
+
+.introheader h1 {
+	font-size: 3rem;
+	font-weight: lighter;
+	margin-top: 0;
+}
+
+.container {
+	height: 90%;
+	width: 80%;
+	padding-bottom: 18px;
+	box-sizing: border-box;
+	margin: auto;
+
+	display: grid;
+	gap: 5px;
+	grid-template-columns: 20% 60% 20%;
+	grid-template-rows: repeat(12, 1fr);
+}
+
+.container > div {
+	background: rgba(15, 15, 15, 0.3);
+	color: var(--white);
+	
+	padding: 1rem;
+	text-align: center;
+
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	border-radius: 12px;
+}
+
+.container > div > h4 {
+	font-weight: 300;
+}
+
+.clock {
+	grid-row: 1 / span 2;
+}
+
+.quote {
+	grid-row: 3 / span 2;
+}
+
+.quote::after {
+	content: '\201d';
+	position: absolute;
+	width: 50px;
+	aspect-ratio: 1/1;
+	color: rgba(240, 240, 240, 0.4);
+	font-size: 7em;
+}
+
+.exercise {
+	grid-row: 5 / span 4;
+}
+
+.foods {
+	grid-row: 9 / span 4;
+}
+
+.foods p {
+	color: var(--grey);
+}
+
+.recommended-habits {
+	grid-column: 3;
+	grid-row: 1 / span 2;
+}
+
+.todo-list {
+	grid-column: 3;
+	grid-row: 3 / span 5;
+
+	justify-content: start !important;
+}
+
+.task-ipt input,
+.reminder input {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	border-bottom: 1px solid var(--white);
+	padding: 0.5rem 1rem 0rem 1rem;
+	color: var(--white);
+}
+
+.task-ipt input::placeholder,
+.reminder-ipt input::placeholder {
+	color: rgba(240, 240, 240, 0.8);
+}
+
+.task-ipt button,
+.reminder-ipt button {
+	background-color: rgba(240, 240, 240, 0.3);
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgba(240, 240, 240, 0.7);
+	padding: 0.5rem 1rem 0rem 1rem;
+	margin-bottom: .5rem;
+	color: var(--white);
+	cursor: pointer;
+	border-radius: 6px 6px 0px 0px;
+}
+
+.task-ipt button:active,
+.reminder-ipt button:active {
+	border-bottom: 1px solid rgba(240, 240, 240, 0.3);
+}
+
+.todo-container,
+.reminder-container {
+	margin-top: .5rem;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: grid;
+	gap: .5rem;
+}
+
+.todo-container::-webkit-scrollbar,
+.reminder-container::-webkit-scrollbar {
+	width: .5rem;
+}
+
+.todo-container::-webkit-scrollbar-track,
+.reminder-container::-webkit-scrollbar-track {
+	background: #654ea3;
+}
+
+.todo-container::-webkit-scrollbar-thumb,
+.reminder-container::-webkit-scrollbar-thumb {
+	background: #eaafc8;
+}
+
+.todo-item,
+.reminder-item {
+	padding: .5rem 1rem;
+	border-radius: 6px 0px 0px 6px;
+	background: linear-gradient(45deg, #654ea3, #eaafc8);
+	background-size: 200%;
+	background-position: bottom left;
+	text-transform: capitalize;
+}
+
+.reminder {
+	grid-column: 3;
+	grid-row: 8 / span 3;
+	justify-content: start !important;
+}
+
+.notifications {
+	grid-column: 3;
+	grid-row: 11 / span 2;
+}
+
+.statistics {
+	grid-column: 2;
+	grid-row: 9 / span 4;
+}
+
+.routine {
+	grid-column: 2;
+	grid-row: 1 / span 8;
+}
+
+/* =============== */
+/* Utility Classes */
+/* =============== */
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.font-100 {
+	font-weight: 100;
+}
+
+.font-200 {
+	font-weight: 200;
+}
+
+.font-300 {
+	font-weight: 300;
+}
+
+.font-400 {
+	font-weight: 400;
+}
+
+.font-larger {
+	font-size: 2rem;
+}
+
+.font-largest {
+	font-size: 3rem;
+}
+
+.font-spaced-5 {
+	letter-spacing: 5px;
+}
+
+.text-section {
+	text-transform: capitalize;
+	line-height: 2;
+}
+
+.color-grey {
+	color: var(--grey);
+}
+
+/* ========================== */
+/* ::Before Elements Headings */
+/* ========================== */
+
+.section::before{
+	font-family: "Raleway", sans-serif;
+
+	position: absolute;
+
+	color: transparent;
+	-webkit-text-stroke: .1px rgba(255, 255, 255, 1);
+
+	opacity: 0;
+	transition: .5s;
+}
+
+.section:hover::before{
+	opacity: 1;
+}
+
+.clock::before {
+	content: "Clock";
+	transform: scale(6.5);
+}
+
+.quote::before {
+	content: "Quote";
+	transform: scale(6);
+}
+
+.exercise::before {
+	content: "Exercise";
+	transform: scale(4.5);
+}
+
+.foods::before {
+	content: "Foods";
+	transform: scale(6);
+}
+
+.recommended-habits::before {
+	content: "Habits";
+	transform: scale(5.5);
+}
+
+/* ========================== */
+/* Remove Contents On Hover */
+/* ========================== */
+
+.section * {
+	transition: .5s;
+}
+
+.section:hover * {
+	opacity: 0;
+}
